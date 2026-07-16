@@ -12,7 +12,7 @@
     "format:check": "prettier --check ."
   },
   "engines": {
-    "node": ">=20 <23"
+    "node": ">=20"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

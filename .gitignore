@@ -42,6 +42,9 @@ yarn-error.log*
 .vscode/*
 !.vscode/extensions.json
 
+# local screenshots
+/tokens-*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
