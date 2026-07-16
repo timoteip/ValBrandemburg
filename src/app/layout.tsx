@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -28,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body className="flex min-h-dvh flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

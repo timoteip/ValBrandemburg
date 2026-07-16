@@ -15,7 +15,7 @@ const swatches = [
 
 export default function TokenPreview() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-16">
+    <div className="mx-auto max-w-4xl px-6 py-16">
       <p className="text-gold-strong text-sm font-medium tracking-widest uppercase">
         Val Brandemburg Inc.
       </p>
@@ -58,6 +58,6 @@ export default function TokenPreview() {
           craftsmanship matter, especially when it comes to home remodeling and design.
         </p>
       </div>
-    </main>
+    </div>
   );
 }
