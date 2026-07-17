@@ -21,6 +21,13 @@ export const whyChooseUsSection = {
   lead: "Two decades of remodeling homes, held to the same standard on every project.",
 } as const;
 
+export const servicesSection = {
+  eyebrow: "What We Do",
+  heading: "Remodeling services for every part of your home",
+  lead: "From a single room to a whole-home transformation, one team handles the design and the build.",
+  cta: { label: "View all services", href: "/services" },
+} as const;
+
 export type WhyPoint = {
   title: string;
   description: string;
