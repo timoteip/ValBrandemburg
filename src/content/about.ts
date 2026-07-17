@@ -5,14 +5,21 @@
  */
 
 export const about = {
+  eyebrow: "About Us",
+  heading: "A family business built on craftsmanship and trust",
+
   intro:
     "What began in 2001 as a small family business has grown into a trusted name in kitchen, bathroom, and whole-home remodeling.",
+
+  storyHeading: "Our story",
 
   story: [
     "Val Brandemburg Inc. started as a family business in 2001, built on a simple belief: that a home should be shaped by the people who live in it, and by the hands that build it.",
     "What started as a dream quickly became a lifelong passion for craftsmanship. Year after year, we have built lasting relationships with homeowners through quality workmanship, honesty, and genuine attention to detail.",
     "By combining creativity, professionalism, and skilled craftsmanship, we have earned a reputation for delivering beautiful spaces our clients are proud to call home.",
   ],
+
+  valuesHeading: "What we stand for",
 
   /** The four pillars shown as cards. */
   values: [
