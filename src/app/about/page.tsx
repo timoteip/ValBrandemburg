@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Hammer } from "lucide-react";
 
 import { Container } from "@/components/common/container";
+import { PlaceholderPanel } from "@/components/common/placeholder-panel";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { about } from "@/content/about";
@@ -87,13 +88,9 @@ export default function AboutPage() {
 
             <Reveal delay={0.12}>
               {workshop.placeholder ? (
-                <div
-                  role="img"
-                  aria-label={workshop.alt}
-                  className="from-secondary/60 to-muted ring-border/60 flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br ring-1"
-                >
+                <PlaceholderPanel label={workshop.alt} className="aspect-[4/3] rounded-2xl">
                   <Hammer aria-hidden className="text-gold-strong/70 size-20" strokeWidth={1.25} />
-                </div>
+                </PlaceholderPanel>
               ) : (
                 <Image
                   src={workshop.src}

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 import { Container } from "@/components/common/container";
+import { PlaceholderPanel } from "@/components/common/placeholder-panel";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { getServiceBySlug, services } from "@/content/services";
@@ -187,13 +188,9 @@ function ServiceMedia({ service }: { service: (typeof services)[number] }) {
 
   if (service.image.placeholder) {
     return (
-      <div
-        role="img"
-        aria-label={service.image.alt}
-        className="from-secondary/60 to-muted ring-border/60 flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br ring-1"
-      >
+      <PlaceholderPanel label={service.image.alt} className="aspect-[4/3] rounded-2xl">
         <Icon aria-hidden className="text-gold-strong/70 size-20" strokeWidth={1.25} />
-      </div>
+      </PlaceholderPanel>
     );
   }
 
