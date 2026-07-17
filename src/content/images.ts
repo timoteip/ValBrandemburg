@@ -23,16 +23,21 @@ export type ImageAsset = {
   credit?: string;
   /** Whether this is temporary stock photography awaiting a real client photo. */
   placeholder?: boolean;
+  /** Tiny base64 preview for a blur-up placeholder while the full image loads. */
+  blurDataURL?: string;
 };
 
 /** Shared, single-use images referenced from more than one place. */
 export const images = {
   heroKitchen: {
     src: "/images/hero/kitchen.jpg",
-    alt: "Sunlit modern kitchen with a marble island and warm wood cabinetry",
+    alt: "Sunlit modern kitchen with a marble island and white cabinetry",
     width: 2400,
     height: 1600,
     placeholder: true,
+    credit: "Unsplash — photo-1556911220-bff31c812dba",
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wCEAAYHBwkLCQwNDQwQERAREBgWFBQWGCMZGxkbGSM1ISchISchNS85LysvOS9UQjs7QlRhUk5SYXZpaXaUjZTBwf8BBgcHCQsJDA0NDBAREBEQGBYUFBYYIxkbGRsZIzUhJyEhJyE1LzkvKy85L1RCOztCVGFSTlJhdmlpdpSNlMHB///AABEIAAoAEAMBIgACEQEDEQH/xABcAAEBAAAAAAAAAAAAAAAAAAAGBxAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMiIxQWEBAQEAAAAAAAAAAAAAAAAAAAIDEQEBAQEAAAAAAAAAAAAAAAABAgAR/9oADAMBAAIRAxEAPwChpqNgpO9bosMlipJWkejT2UuSkUoDuBmRiDQayRWLgqDuIJ/TSqKJMdR49ePXHypzanc6kN//2Q==",
   },
   ogDefault: {
     src: "/images/og/default.jpg",
