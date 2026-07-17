@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
 /**
@@ -7,6 +8,12 @@ import { motion, useReducedMotion } from "motion/react";
  * when the element scrolls into view. This is the seam that lets sections stay
  * Server Components: only the wrapper is client code; the children are passed
  * straight through. Honors prefers-reduced-motion by rendering statically.
+ *
+ * The reduced-motion preference is only applied after mount. The server can't
+ * know the visitor's setting, so reading it during the first render would make
+ * the client markup diverge from the server's and trip a hydration mismatch.
+ * Instead the first client render always matches the server's animated markup,
+ * then settles to a static element for visitors who ask for reduced motion.
  */
 export function Reveal({
   children,
@@ -20,8 +27,13 @@ export function Reveal({
   y?: number;
 }) {
   const prefersReducedMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
 
-  if (prefersReducedMotion) {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (mounted && prefersReducedMotion) {
     return <div className={className}>{children}</div>;
   }
 
