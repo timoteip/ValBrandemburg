@@ -10,6 +10,13 @@
 
 import type { ImageAsset } from "./images";
 
+/** Header copy for the gallery page. */
+export const galleryPage = {
+  eyebrow: "Our Work",
+  heading: "A look at what we've built",
+  lead: "A selection of recent kitchen, bathroom, basement, and whole-home projects.",
+} as const;
+
 export const galleryCategories = [
   "Kitchen",
   "Bathroom",
