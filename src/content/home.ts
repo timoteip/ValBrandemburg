@@ -15,6 +15,12 @@ export const hero = {
   secondaryCta: { label: "View Our Work", href: "/gallery" },
 } as const;
 
+export const whyChooseUsSection = {
+  eyebrow: "Why Homeowners Choose Us",
+  heading: "Craftsmanship you can trust, from the first visit to the final walkthrough",
+  lead: "Two decades of remodeling homes, held to the same standard on every project.",
+} as const;
+
 export type WhyPoint = {
   title: string;
   description: string;
