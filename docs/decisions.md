@@ -63,3 +63,18 @@ while keeping text accessible.
 Service and feature icons are imported Lucide components stored directly in the
 content modules, not string names resolved at runtime. An invalid icon becomes a
 compile error instead of a missing glyph in production.
+
+## Hero image: priority LCP with a blur-up placeholder
+
+The hero photograph is the page's Largest Contentful Paint element, so it loads
+with `priority` (no lazy loading) and a `blurDataURL` so a tiny inline preview
+paints immediately while the full image streams in — avoiding a blank hero on
+first load without adding a layout shift. The blur base64 is stored alongside the
+image's other metadata in `src/content/images.ts`, keeping every fact about an
+image in one record.
+
+Legibility of the white copy over an arbitrary photograph is handled with two
+stacked, purely decorative gradient overlays (a left-to-right darkening for the
+text column and a bottom-up darkening) rather than by darkening the image itself.
+This keeps the photo faithful while guaranteeing contrast at every breakpoint,
+and the overlays carry `aria-hidden` since they are presentational.
