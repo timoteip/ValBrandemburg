@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/common/container";
 import { Reveal } from "@/components/common/reveal";
+import { ServiceCard } from "@/components/services/service-card";
 import { Button } from "@/components/ui/button";
 import { servicesSection } from "@/content/home";
 import { services } from "@/content/services";
@@ -37,34 +38,13 @@ export function ServicesOverview() {
         </div>
 
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => {
-            const Icon = service.icon;
-            return (
-              <li key={service.slug} className="h-full">
-                <Reveal delay={0.06 * i} className="h-full">
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="group border-border/60 bg-card hover:border-gold-strong/40 flex h-full flex-col rounded-xl border p-6 transition-colors"
-                  >
-                    <span className="bg-secondary/50 inline-flex size-12 items-center justify-center rounded-lg">
-                      <Icon aria-hidden className="text-gold-strong size-6" />
-                    </span>
-                    <h3 className="mt-5 text-lg font-semibold">{service.title}</h3>
-                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-                      {service.blurb}
-                    </p>
-                    <span className="text-gold-strong mt-5 inline-flex items-center gap-1.5 text-sm font-medium">
-                      Learn more
-                      <ArrowRight
-                        aria-hidden
-                        className="size-4 transition-transform group-hover:translate-x-0.5"
-                      />
-                    </span>
-                  </Link>
-                </Reveal>
-              </li>
-            );
-          })}
+          {services.map((service, i) => (
+            <li key={service.slug} className="h-full">
+              <Reveal delay={0.06 * i} className="h-full">
+                <ServiceCard service={service} />
+              </Reveal>
+            </li>
+          ))}
         </ul>
 
         <Reveal delay={0.1} className="mt-12 flex justify-center">

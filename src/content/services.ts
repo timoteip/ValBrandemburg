@@ -198,3 +198,10 @@ export const services: Service[] = [
 
 export const getServiceBySlug = (slug: string): Service | undefined =>
   services.find((service) => service.slug === slug);
+
+/** Header copy for the services index page. */
+export const servicesPage = {
+  eyebrow: "Our Services",
+  heading: "Remodeling and construction for every part of your home",
+  lead: "Whether it's a single room or your whole home, we design and build it with one team and one standard of craftsmanship.",
+} as const;
