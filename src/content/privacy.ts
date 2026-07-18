@@ -38,6 +38,12 @@ export const privacy = {
       ],
     },
     {
+      heading: "Analytics",
+      body: [
+        "We use a privacy-friendly analytics service to understand how the site is used — for example, which pages are viewed most often. It measures traffic in aggregate, does not use cookies, and does not identify you personally.",
+      ],
+    },
+    {
       heading: "Data retention",
       body: [
         "We keep the messages you send us for as long as needed to respond to your inquiry and maintain a record of our correspondence. You can ask us to delete your information at any time.",
