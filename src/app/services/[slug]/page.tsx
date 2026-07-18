@@ -200,6 +200,7 @@ function ServiceMedia({ service }: { service: (typeof services)[number] }) {
       alt={service.image.alt}
       width={service.image.width}
       height={service.image.height}
+      priority
       className="aspect-[4/3] w-full rounded-2xl object-cover"
       sizes="(min-width: 1024px) 50vw, 100vw"
     />

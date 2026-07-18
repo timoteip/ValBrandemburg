@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Hammer } from "lucide-react";
 
 import { Container } from "@/components/common/container";
-import { PlaceholderPanel } from "@/components/common/placeholder-panel";
 import { Reveal } from "@/components/common/reveal";
 import { Button } from "@/components/ui/button";
 import { about } from "@/content/about";
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const workshop = images.aboutWorkshop;
+  const story = images.aboutStory;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -87,20 +85,15 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.12}>
-              {workshop.placeholder ? (
-                <PlaceholderPanel label={workshop.alt} className="aspect-[4/3] rounded-2xl">
-                  <Hammer aria-hidden className="text-gold-strong/70 size-20" strokeWidth={1.25} />
-                </PlaceholderPanel>
-              ) : (
-                <Image
-                  src={workshop.src}
-                  alt={workshop.alt}
-                  width={workshop.width}
-                  height={workshop.height}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="aspect-[4/3] w-full rounded-2xl object-cover"
-                />
-              )}
+              <Image
+                src={story.src}
+                alt={story.alt}
+                width={story.width}
+                height={story.height}
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="aspect-[4/3] w-full rounded-2xl object-cover"
+              />
             </Reveal>
           </div>
         </Container>

@@ -53,8 +53,9 @@ export const services: Service[] = [
     icon: ChefHat,
     image: {
       src: "/images/services/kitchen-remodeling.jpg",
-      alt: "Renovated kitchen with a large island, quartz countertops, and pendant lighting",
-      placeholder: true,
+      alt: "Remodeled kitchen with cherry cabinetry, a curved granite island, and pendant lighting",
+      width: 2048,
+      height: 1536,
     },
   },
   {
@@ -68,8 +69,9 @@ export const services: Service[] = [
     icon: Bath,
     image: {
       src: "/images/services/bathroom-remodeling.jpg",
-      alt: "Modern bathroom with a glass walk-in shower, freestanding tub, and stone tile",
-      placeholder: true,
+      alt: "Remodeled bathroom with a glass shower, a double vanity, and stone tile",
+      width: 960,
+      height: 540,
     },
   },
   {
@@ -84,8 +86,9 @@ export const services: Service[] = [
     icon: House,
     image: {
       src: "/images/services/whole-home-renovations.jpg",
-      alt: "Open-concept living and dining area after a full home renovation",
-      placeholder: true,
+      alt: "Renovated kitchen with natural wood cabinetry and stainless steel appliances",
+      width: 1536,
+      height: 2048,
     },
   },
   {
@@ -115,8 +118,9 @@ export const services: Service[] = [
     icon: Hammer,
     image: {
       src: "/images/services/custom-carpentry.jpg",
-      alt: "Custom built-in bookshelves and cabinetry with fine trim detail",
-      placeholder: true,
+      alt: "Custom built-in closet with adjustable shelving and hanging rods",
+      width: 720,
+      height: 960,
     },
   },
   {

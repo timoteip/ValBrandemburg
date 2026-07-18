@@ -31,13 +31,11 @@ export type ImageAsset = {
 export const images = {
   heroKitchen: {
     src: "/images/hero/kitchen.jpg",
-    alt: "Sunlit modern kitchen with a marble island and white cabinetry",
-    width: 2400,
-    height: 1600,
-    placeholder: true,
-    credit: "Unsplash — photo-1556911220-bff31c812dba",
+    alt: "Remodeled kitchen with white cabinetry, a dark island, and quartz countertops",
+    width: 2048,
+    height: 1536,
     blurDataURL:
-      "data:image/jpeg;base64,/9j/2wCEAAYHBwkLCQwNDQwQERAREBgWFBQWGCMZGxkbGSM1ISchISchNS85LysvOS9UQjs7QlRhUk5SYXZpaXaUjZTBwf8BBgcHCQsJDA0NDBAREBEQGBYUFBYYIxkbGRsZIzUhJyEhJyE1LzkvKy85L1RCOztCVGFSTlJhdmlpdpSNlMHB///AABEIAAoAEAMBIgACEQEDEQH/xABcAAEBAAAAAAAAAAAAAAAAAAAGBxAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMiIxQWEBAQEAAAAAAAAAAAAAAAAAAAIDEQEBAQEAAAAAAAAAAAAAAAABAgAR/9oADAMBAAIRAxEAPwChpqNgpO9bosMlipJWkejT2UuSkUoDuBmRiDQayRWLgqDuIJ/TSqKJMdR49ePXHypzanc6kN//2Q==",
+      "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBf/EAB8QAAIBBAIDAAAAAAAAAAAAAAECAwAREiEEQRMx4f/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAhEB/9oADAMBAAIRAxEAPwBwzRRKnlZcnXIAWN/tUmwk48oWQXKaxG/VYXLhSSGEEW11QhaBRFExVCNgd0a7RGWH/9k=",
   },
   ogDefault: {
     src: "/images/og/default.jpg",
@@ -46,11 +44,10 @@ export const images = {
     height: 630,
     placeholder: true,
   },
-  aboutWorkshop: {
+  aboutStory: {
     src: "/images/about/workshop.jpg",
-    alt: "Craftsman measuring a length of trim in a bright workshop",
-    width: 1600,
-    height: 1200,
-    placeholder: true,
+    alt: "A finished kitchen remodel with cherry cabinetry and a large center island",
+    width: 960,
+    height: 720,
   },
 } satisfies Record<string, ImageAsset>;
