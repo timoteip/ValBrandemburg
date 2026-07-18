@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { site } from "@/content/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,9 +20,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Val Brandemburg Inc.",
-  description:
-    "Kitchen, bathroom, and whole-home remodeling built to last. Over twenty years of craftsmanship for homeowners who expect more.",
+  metadataBase: new URL(site.url),
+  title: site.name,
+  description: site.description,
 };
 
 export default function RootLayout({
