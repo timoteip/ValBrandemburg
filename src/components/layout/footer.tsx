@@ -45,11 +45,11 @@ export function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li className="text-muted-foreground inline-flex items-center gap-2.5">
+              <li className="text-muted-foreground flex items-center gap-2.5">
                 <Printer className="text-gold-strong size-4 shrink-0" />
                 Fax {site.fax.display}
               </li>
-              <li className="text-muted-foreground inline-flex items-center gap-2.5">
+              <li className="text-muted-foreground flex items-center gap-2.5">
                 <MapPin className="text-gold-strong size-4 shrink-0" />
                 {site.serviceArea.join(", ")}
               </li>
