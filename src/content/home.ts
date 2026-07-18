@@ -28,6 +28,24 @@ export const servicesSection = {
   cta: { label: "View all services", href: "/services" },
 } as const;
 
+export const processSection = {
+  eyebrow: "How We Work",
+  heading: "A clear process, from first visit to final walkthrough",
+  lead: "Every project follows the same five steps, so you always know what is happening and what comes next.",
+} as const;
+
+export const testimonialsSection = {
+  eyebrow: "What Homeowners Say",
+  heading: "Trusted by families across the region",
+  lead: "A few words from homeowners we have worked with.",
+} as const;
+
+export const ctaSection = {
+  heading: "Ready to start your project?",
+  lead: "Book a free, no-obligation consultation and let's talk about what's possible for your home.",
+  button: { label: "Get a Free Consultation", href: "/contact" },
+} as const;
+
 export type WhyPoint = {
   title: string;
   description: string;
