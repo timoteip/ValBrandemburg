@@ -40,6 +40,12 @@ export const testimonialsSection = {
   lead: "A few words from homeowners we have worked with.",
 } as const;
 
+export const faqSection = {
+  eyebrow: "FAQ",
+  heading: "Answers to common questions",
+  lead: "A few things homeowners often ask before getting started.",
+} as const;
+
 export const ctaSection = {
   heading: "Ready to start your project?",
   lead: "Book a free, no-obligation consultation and let's talk about what's possible for your home.",

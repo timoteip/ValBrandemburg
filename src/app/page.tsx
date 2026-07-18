@@ -1,4 +1,5 @@
 import { Cta } from "@/components/sections/cta";
+import { FaqSection } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { Process } from "@/components/sections/process";
 import { ServicesOverview } from "@/components/sections/services-overview";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <ServicesOverview />
       <Process />
       <Testimonials />
+      <FaqSection />
       <Cta />
     </>
   );
