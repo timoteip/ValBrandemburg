@@ -54,3 +54,6 @@ conventions.md
 
 # local photo staging (never committed)
 photos-review/
+
+.vercel
+.env*
