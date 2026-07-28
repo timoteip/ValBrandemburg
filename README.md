@@ -1,46 +1,33 @@
 # Val Brandemburg Inc.
 
-Marketing site for Val Brandemburg Inc., a kitchen, bathroom, and whole-home remodeling contractor. The site's purpose is to generate consultation requests.
+A website for a remodeling contractor who does kitchens, bathrooms, and whole-home renovations. Its main job is to get visitors to request a free consultation.
 
-## Requirements
+## What it does
 
-- Node.js 20 or 22 (LTS)
-- npm 10+
+- Explains the remodeling services offered
+- Shows a photo gallery of finished projects
+- Has a contact form so visitors can request a consultation
+- Loads fast, because the pages are built ahead of time instead of being assembled on every visit
+- All the text and photos live in the code, so updates go out the same way code changes do — there's no separate editor to log into
+
+## Built with
+
+- **Next.js** – Builds the website.
+- **TypeScript** – Helps catch coding mistakes.
+- **Tailwind CSS** – Styles the website.
+- **shadcn/ui** – Ready-made pieces like buttons and form fields, so they don't have to be built from scratch.
+- **Framer Motion** – Adds the animations and smooth transitions.
 
 ## Getting started
 
+You'll need Node.js 20 or 22 installed first. Node.js is the program that runs the website on your computer.
+
 ```bash
 npm install
-cp .env.example .env.local   # fill in the values
+cp .env.example .env.local
 npm run dev
 ```
 
-The site runs at http://localhost:3000.
+Then open http://localhost:3000 in your browser.
 
-## Scripts
-
-| Script                 | Purpose                    |
-| ---------------------- | -------------------------- |
-| `npm run dev`          | Development server         |
-| `npm run build`        | Production build           |
-| `npm start`            | Serve the production build |
-| `npm run lint`         | ESLint                     |
-| `npm run typecheck`    | TypeScript, no emit        |
-| `npm run format`       | Prettier, write            |
-| `npm run format:check` | Prettier, check only       |
-
-## Environment
-
-See `.env.example` for the full list. `.env.local` holds real values and is never committed.
-
-## Stack
-
-Next.js 15 (App Router), TypeScript, Tailwind CSS v4, shadcn/ui, Framer Motion.
-
-Pages are Server Components and statically rendered. The contact form's route handler is the only server-side runtime. See `conventions.md` for the rules this project is built under, and `docs/decisions.md` for the reasoning behind architectural choices.
-
-## Content
-
-Copy, services, and gallery items live in typed modules under `src/content/`. There is no CMS: content updates ship as commits.
-
-Images live in `public/images/`, grouped by usage, and are declared with their alt text in `src/content/images.ts`.
+Fill in the values in `.env.local` before starting — `.env.example` lists what's needed. That file holds passwords and keys, so it never gets uploaded to GitHub.
